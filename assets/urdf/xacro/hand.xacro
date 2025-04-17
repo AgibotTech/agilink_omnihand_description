@@ -265,7 +265,8 @@
                 <origin rpy="${thumb_dip_collision_cylinder_rotr*mirror} 0 0"
                     xyz="0 ${thumb_dip_collision_cylinder_y*mirror} ${thumb_dip_collision_cylinder_z}" />
                 <geometry>
-                    <cylinder radius="${thumb_dip_collision_cylinder_r}" length="${thumb_dip_collision_cylinder_l}" />
+                    <cylinder radius="${thumb_dip_collision_cylinder_r}"
+                        length="${thumb_dip_collision_cylinder_l}" />
                 </geometry>
             </collision>
             <inertial>
@@ -323,8 +324,15 @@
             <parent link="${name}_palm" />
             <child link="${name}_ring_abad" />
             <axis xyz="1 0 0" />
-            <limit effort="${ring_abad_torque_max}" velocity="${ring_abad_velocity_max}"
-                lower="${ring_abad_position_min}" upper="${ring_abad_position_max}" />
+            <xacro:if value="${mirror_mesh == True}">
+                <limit effort="${ring_abad_torque_max}" velocity="${ring_abad_velocity_max}"
+                    lower="${ring_abad_position_max*mirror}"
+                    upper="${ring_abad_position_min*mirror}" />
+            </xacro:if>
+            <xacro:if value="${mirror_mesh == False}">
+                <limit effort="${ring_abad_torque_max}" velocity="${ring_abad_velocity_max}"
+                    lower="${ring_abad_position_min}" upper="${ring_abad_position_max}" />
+            </xacro:if>
         </joint>
         <xacro:finger prefix="${name}_ring" mesh_path="${mesh_path}" />
 
@@ -334,8 +342,15 @@
             <parent link="${name}_palm" />
             <child link="${name}_pinky_abad" />
             <axis xyz="1 0 0" />
-            <limit effort="${pinky_abad_torque_max}" velocity="${pinky_abad_velocity_max}"
-                lower="${pinky_abad_position_min}" upper="${pinky_abad_position_max}" />
+            <xacro:if value="${mirror_mesh == True}">
+                <limit effort="${pinky_abad_torque_max}" velocity="${pinky_abad_velocity_max}"
+                    lower="${pinky_abad_position_max*mirror}"
+                    upper="${pinky_abad_position_min*mirror}" />
+            </xacro:if>
+            <xacro:if value="${mirror_mesh == False}">
+                <limit effort="${pinky_abad_torque_max}" velocity="${pinky_abad_velocity_max}"
+                    lower="${pinky_abad_position_min}" upper="${pinky_abad_position_max}" />
+            </xacro:if>
         </joint>
         <xacro:finger prefix="${name}_pinky" mesh_path="${mesh_path}" />
 

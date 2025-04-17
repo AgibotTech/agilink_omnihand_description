@@ -399,7 +399,7 @@
     <parent link="L_palm"/>
     <child link="L_ring_abad"/>
     <axis xyz="1 0 0"/>
-    <limit effort="33.5" lower="0" upper="0.17453292519943295" velocity="21"/>
+    <limit effort="33.5" lower="-0.17453292519943295" upper="0" velocity="21"/>
   </joint>
   <link name="L_ring_abad">
     <visual>
@@ -491,7 +491,7 @@
     <parent link="L_palm"/>
     <child link="L_pinky_abad"/>
     <axis xyz="1 0 0"/>
-    <limit effort="33.5" lower="0" upper="0.17453292519943295" velocity="21"/>
+    <limit effort="33.5" lower="-0.17453292519943295" upper="0" velocity="21"/>
   </joint>
   <link name="L_pinky_abad">
     <visual>
