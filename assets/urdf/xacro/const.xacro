@@ -101,53 +101,53 @@
     <!-- joint limits -->
     <xacro:property name="thumb_roll_position_max" value="${50*pi/180.0}" />
     <xacro:property name="thumb_roll_position_min" value="${-10*pi/180.0}" />
-    <xacro:property name="thumb_roll_velocity_max" value="21" />
-    <xacro:property name="thumb_roll_torque_max" value="33.5" />
+    <xacro:property name="thumb_roll_velocity_max" value="0.164" />
+    <xacro:property name="thumb_roll_torque_max" value="0.419" />
 
     <xacro:property name="thumb_abad_position_max" value="0" />
     <xacro:property name="thumb_abad_position_min" value="${-100*pi/180.0}" />
-    <xacro:property name="thumb_abad_velocity_max" value="21" />
-    <xacro:property name="thumb_abad_torque_max" value="33.5" />
+    <xacro:property name="thumb_abad_velocity_max" value="0.164" />
+    <xacro:property name="thumb_abad_torque_max" value="0.314" />
 
     <xacro:property name="thumb_mcp_position_max" value="${49*pi/180.0}" />
     <xacro:property name="thumb_mcp_position_min" value="0" />
-    <xacro:property name="thumb_mcp_velocity_max" value="21" />
-    <xacro:property name="thumb_mcp_torque_max" value="33.5" />
+    <xacro:property name="thumb_mcp_velocity_max" value="0.308" />
+    <xacro:property name="thumb_mcp_torque_max" value="1.764" />
 
     <xacro:property name="thumb_pip_position_max" value="${65*pi/180.0}" />
     <xacro:property name="thumb_pip_position_min" value="0" />
-    <xacro:property name="thumb_pip_velocity_max" value="21" />
-    <xacro:property name="thumb_pip_torque_max" value="33.5" />
+    <xacro:property name="thumb_pip_velocity_max" value="0.308" />
+    <xacro:property name="thumb_pip_torque_max" value="1.764" />
 
     <xacro:property name="thumb_dip_position_max" value="${65*pi/180.0}" />
     <xacro:property name="thumb_dip_position_min" value="0" />
-    <xacro:property name="thumb_dip_velocity_max" value="21" />
-    <xacro:property name="thumb_dip_torque_max" value="33.5" />
+    <xacro:property name="thumb_dip_velocity_max" value="0.308" />
+    <xacro:property name="thumb_dip_torque_max" value="1.764" />
 
     <xacro:property name="index_abad_position_max" value="0" />
     <xacro:property name="index_abad_position_min" value="${-12*pi/180.0}" />
-    <xacro:property name="index_abad_velocity_max" value="21" />
-    <xacro:property name="index_abad_torque_max" value="33.5" />
+    <xacro:property name="index_abad_velocity_max" value="0.164" />
+    <xacro:property name="index_abad_torque_max" value="1.863" />
 
     <xacro:property name="ring_abad_position_max" value="${10*pi/180.0}" />
     <xacro:property name="ring_abad_position_min" value="0" />
-    <xacro:property name="ring_abad_velocity_max" value="21" />
-    <xacro:property name="ring_abad_torque_max" value="33.5" />
+    <xacro:property name="ring_abad_velocity_max" value="0.164" />
+    <xacro:property name="ring_abad_torque_max" value="2.766" />
 
     <xacro:property name="pinky_abad_position_max" value="${10*pi/180.0}" />
     <xacro:property name="pinky_abad_position_min" value="0" />
-    <xacro:property name="pinky_abad_velocity_max" value="21" />
-    <xacro:property name="pinky_abad_torque_max" value="33.5" />
+    <xacro:property name="pinky_abad_velocity_max" value="0.164" />
+    <xacro:property name="pinky_abad_torque_max" value="3.393" />
 
     <xacro:property name="finger_pip_position_max" value="${90*pi/180.0}" />
     <xacro:property name="finger_pip_position_min" value="0" />
-    <xacro:property name="finger_pip_velocity_max" value="21" />
-    <xacro:property name="finger_pip_torque_max" value="33.5" />
+    <xacro:property name="finger_pip_velocity_max" value="0.308" />
+    <xacro:property name="finger_pip_torque_max" value="1.764" />
 
     <xacro:property name="finger_dip_position_max" value="${105*pi/180.0}" />
     <xacro:property name="finger_dip_position_min" value="0" />
-    <xacro:property name="finger_dip_velocity_max" value="21" />
-    <xacro:property name="finger_dip_torque_max" value="33.5" />
+    <xacro:property name="finger_dip_velocity_max" value="0.308" />
+    <xacro:property name="finger_dip_torque_max" value="1.764" />
 
 
     <!-- dynamics inertial value -->
