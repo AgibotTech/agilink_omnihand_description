@@ -27,23 +27,23 @@
     <xacro:property name="thumb_tip_y" value="0.02392" />
     <xacro:property name="thumb_tip_z" value="-0.01158" />
 
-    <xacro:property name="index_abad_x" value="0" />
+    <xacro:property name="index_abad_x" value="-0.00069782" />
     <xacro:property name="index_abad_y" value=" 0.026958" />
     <xacro:property name="index_abad_z" value=" 0.094423" />
 
-    <xacro:property name="middle_abad_x" value="0" />
-    <xacro:property name="middle_abad_y" value="0.0079581" />
+    <xacro:property name="middle_abad_x" value="-0.0031978" />
+    <xacro:property name="middle_abad_y" value="0.0079501" />
     <xacro:property name="middle_abad_z" value="0.096423" />
 
-    <xacro:property name="ring_abad_x" value="0" />
-    <xacro:property name="ring_abad_y" value="-0.011042" />
+    <xacro:property name="ring_abad_x" value="-0.0021978" />
+    <xacro:property name="ring_abad_y" value="-0.01105" />
     <xacro:property name="ring_abad_z" value="0.094423" />
 
-    <xacro:property name="pinky_abad_x" value="0" />
-    <xacro:property name="pinky_abad_y" value="-0.030042" />
+    <xacro:property name="pinky_abad_x" value="-0.00069782" />
+    <xacro:property name="pinky_abad_y" value="-0.03005" />
     <xacro:property name="pinky_abad_z" value="0.089423" />
 
-    <xacro:property name="finger_pip_x" value="-0.00076121" />
+    <xacro:property name="finger_pip_x" value="0.001025" />
     <xacro:property name="finger_pip_y" value="0" />
     <xacro:property name="finger_pip_z" value="0.017575" />
 
