@@ -24,8 +24,8 @@
     <xacro:property name="thumb_dip_y" value="0.026054" />
     <xacro:property name="thumb_dip_z" value="-0.008672" />
 
-    <xacro:property name="thumb_tip_y" value="0.02392" />
-    <xacro:property name="thumb_tip_z" value="-0.01158" />
+    <xacro:property name="thumb_tip_y" value="0.02311" />
+    <xacro:property name="thumb_tip_z" value="-0.01374" />
 
     <xacro:property name="index_abad_x" value="-0.00069782" />
     <xacro:property name="index_abad_y" value=" 0.026958" />
@@ -51,8 +51,8 @@
     <xacro:property name="finger_dip_y" value="0" />
     <xacro:property name="finger_dip_z" value="0.036" />
 
-    <xacro:property name="finger_tip_x" value="-0.0011" />
-    <xacro:property name="finger_tip_z" value="0.03612" />
+    <xacro:property name="finger_tip_x" value="-0.00131" />
+    <xacro:property name="finger_tip_z" value="0.03841" />
 
     <!-- collision parameters -->
     <xacro:property name="palm_collision_cylinder_z" value="0.00725" />
