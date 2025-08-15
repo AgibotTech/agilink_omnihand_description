@@ -134,7 +134,7 @@
     <xacro:property name="ring_abad_velocity_max" value="0.164" />
     <xacro:property name="ring_abad_torque_max" value="2.766" />
 
-    <xacro:property name="pinky_abad_position_max" value="${10*pi/180.0}" />
+    <xacro:property name="pinky_abad_position_max" value="${12*pi/180.0}" />
     <xacro:property name="pinky_abad_position_min" value="0" />
     <xacro:property name="pinky_abad_velocity_max" value="0.164" />
     <xacro:property name="pinky_abad_torque_max" value="3.393" />
@@ -152,16 +152,16 @@
 
     <!-- dynamics inertial value -->
     <!-- palm -->
-    <xacro:property name="palm_mass"   value="0.2129" />
-    <xacro:property name="palm_com_x"  value="-0.0086937" />
-    <xacro:property name="palm_com_y"  value="0.0036968" />
-    <xacro:property name="palm_com_z"  value="0.0469646" />
-    <xacro:property name="palm_ixx"    value="0.00025557" />
-    <xacro:property name="palm_ixy"    value="0.00000236" />
-    <xacro:property name="palm_ixz"    value="-0.00001885" />
-    <xacro:property name="palm_iyy"    value="0.00022595" />
-    <xacro:property name="palm_iyz"    value="0.00000793" />
-    <xacro:property name="palm_izz"    value="0.00012387" />
+    <xacro:property name="palm_mass"   value="0.2175" />
+    <xacro:property name="palm_com_x"  value="-0.0071151" />
+    <xacro:property name="palm_com_y"  value="0.0044599" />
+    <xacro:property name="palm_com_z"  value="0.0455754" />
+    <xacro:property name="palm_ixx"    value="0.00023334" />
+    <xacro:property name="palm_ixy"    value="0.00000425" />
+    <xacro:property name="palm_ixz"    value="-0.00002030" />
+    <xacro:property name="palm_iyy"    value="0.00020584" />
+    <xacro:property name="palm_iyz"    value="0.00000989" />
+    <xacro:property name="palm_izz"    value="0.00012494" />
 
     <!-- thumb_roll -->
     <xacro:property name="thumb_roll_mass"   value="0.0179" />
@@ -224,39 +224,39 @@
     <xacro:property name="thumb_dip_izz"    value="0.00000101" />
 
     <!-- finger_abad -->
-    <xacro:property name="finger_abad_mass" value="0.0336" />
-    <xacro:property name="finger_abad_com_x" value="-0.0016333" />
-    <xacro:property name="finger_abad_com_y" value="0.0004633" />
-    <xacro:property name="finger_abad_com_z" value="0.0054014" />
-    <xacro:property name="finger_abad_ixx" value="0.00000646" />
-    <xacro:property name="finger_abad_ixy" value="-0.00000005" />
-    <xacro:property name="finger_abad_ixz" value="-0.00000050" />
-    <xacro:property name="finger_abad_iyy" value="0.00000758" />
-    <xacro:property name="finger_abad_iyz" value="0.00000045" />
-    <xacro:property name="finger_abad_izz" value="0.00000239" />
+    <xacro:property name="finger_abad_mass" value="0.0349" />
+    <xacro:property name="finger_abad_com_x" value="-0.0009337" />
+    <xacro:property name="finger_abad_com_y" value="-0.0000237" />
+    <xacro:property name="finger_abad_com_z" value="0.0063625" />
+    <xacro:property name="finger_abad_ixx" value="0.00000674" />
+    <xacro:property name="finger_abad_ixy" value="0.00000000" />
+    <xacro:property name="finger_abad_ixz" value="-0.00000033" />
+    <xacro:property name="finger_abad_iyy" value="0.00000781" />
+    <xacro:property name="finger_abad_iyz" value="0.00000000" />
+    <xacro:property name="finger_abad_izz" value="0.00000237" />
 
     <!-- finger_pip -->
-    <xacro:property name="finger_pip_mass" value="0.0128" />
-    <xacro:property name="finger_pip_com_x" value="-0.0062398" />
-    <xacro:property name="finger_pip_com_y" value="0.0010607" />
-    <xacro:property name="finger_pip_com_z" value="0.0122334" />
-    <xacro:property name="finger_pip_ixx" value="0.00000317" />
-    <xacro:property name="finger_pip_ixy" value="-0.00000003" />
+    <xacro:property name="finger_pip_mass" value="0.0125" />
+    <xacro:property name="finger_pip_com_x" value="-0.0009312" />
+    <xacro:property name="finger_pip_com_y" value="-0.0000098" />
+    <xacro:property name="finger_pip_com_z" value="0.0120489" />
+    <xacro:property name="finger_pip_ixx" value="0.00000316" />
+    <xacro:property name="finger_pip_ixy" value="0.00000000" />
     <xacro:property name="finger_pip_ixz" value="-0.00000035" />
-    <xacro:property name="finger_pip_iyy" value="0.00000321" />
-    <xacro:property name="finger_pip_iyz" value="0.00000022" />
-    <xacro:property name="finger_pip_izz" value="0.00000066" />
+    <xacro:property name="finger_pip_iyy" value="0.00000323" />
+    <xacro:property name="finger_pip_iyz" value="0.00000000" />
+    <xacro:property name="finger_pip_izz" value="0.00000063" />
 
     <!-- finger_dip -->
     <xacro:property name="finger_dip_mass" value="0.0047" />
-    <xacro:property name="finger_dip_com_x" value="0.0002897" />
-    <xacro:property name="finger_dip_com_y" value="0.0015071" />
-    <xacro:property name="finger_dip_com_z" value="0.0166735" />
+    <xacro:property name="finger_dip_com_x" value="0.0002904" />
+    <xacro:property name="finger_dip_com_y" value="0.0000482" />
+    <xacro:property name="finger_dip_com_z" value="0.0167403" />
     <xacro:property name="finger_dip_ixx" value="0.00000076" />
     <xacro:property name="finger_dip_ixy" value="0.00000000" />
     <xacro:property name="finger_dip_ixz" value="0.00000002" />
     <xacro:property name="finger_dip_iyy" value="0.00000077" />
-    <xacro:property name="finger_dip_iyz" value="0.00000005" />
-    <xacro:property name="finger_dip_izz" value="0.00000017" />
+    <xacro:property name="finger_dip_iyz" value="0.00000000" />
+    <xacro:property name="finger_dip_izz" value="0.00000016" />
 
 </robot>
