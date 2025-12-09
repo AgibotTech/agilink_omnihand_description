@@ -13,6 +13,17 @@
         <mesh name="finger_abad" file="finger_abad.STL" />
         <mesh name="finger_pip" file="finger_pip.STL" />
         <mesh name="finger_dip" file="finger_dip.STL" />
+
+        <mesh name="l_palm_col" file="collision/l_palm_col.STL" />
+        <mesh name="l_thumb_roll_col" file="collision/l_thumb_roll_col.STL" />
+        <mesh name="r_palm_col" file="collision/r_palm_col.STL" />
+        <mesh name="r_thumb_roll_col" file="collision/r_thumb_roll_col.STL" />
+        <mesh name="thumb_abad_col" file="collision/thumb_abad_col.STL" />
+        <mesh name="thumb_mcp_col" file="collision/thumb_mcp_col.STL" />
+        <mesh name="thumb_pip_col" file="collision/thumb_pip_col.STL" />
+        <mesh name="thumb_dip_col" file="collision/thumb_dip_col.STL" />
+        <mesh name="finger_pip_col" file="collision/finger_pip_col.STL" />
+        <mesh name="finger_dip_col" file="collision/finger_dip_col.STL" />
         <material name="white" rgba="0.95 0.95 0.95 1.0" />
         <material name="read" rgba="1 0.0 0.0 1.0" />
     </asset>

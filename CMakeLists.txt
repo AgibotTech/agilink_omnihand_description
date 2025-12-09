@@ -26,6 +26,7 @@ endif()
 install(DIRECTORY
   launch
   assets/urdf
+  assets/urdf_mesh_col
   assets/meshes
   assets/rviz
   DESTINATION share/${PROJECT_NAME}/
