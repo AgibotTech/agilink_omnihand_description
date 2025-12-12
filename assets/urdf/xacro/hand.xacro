@@ -55,7 +55,7 @@
         <joint name="${name}_thumb_roll_joint" type="revolute">
             <origin xyz="${thumb_roll_x} ${thumb_roll_y*mirror} ${thumb_roll_z}" rpy="0 0 0" />
             <parent link="${name}_palm" />
-            <child link="${name}_thumb_roll" />
+            <child link="${name}_thumb_roll_link" />
             <axis xyz="1 0 0" />
             <xacro:if value="${mirror_mesh == True}">
                 <limit effort="${thumb_roll_torque_max}" velocity="${thumb_roll_velocity_max}"
@@ -68,7 +68,7 @@
             </xacro:if>
         </joint>
 
-        <link name="${name}_thumb_roll">
+        <link name="${name}_thumb_roll_link">
             <visual>
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
@@ -94,8 +94,8 @@
 
         <joint name="${name}_thumb_abad_joint" type="revolute">
             <origin xyz="${thumb_abad_x} ${thumb_abad_y*mirror} ${thumb_abad_z}" rpy="0 0 0" />
-            <parent link="${name}_thumb_roll" />
-            <child link="${name}_thumb_abad" />
+            <parent link="${name}_thumb_roll_link" />
+            <child link="${name}_thumb_abad_link" />
             <axis xyz="0 0 1" />
             <xacro:if value="${mirror_mesh == True}">
                 <limit effort="${thumb_abad_torque_max}" velocity="${thumb_abad_velocity_max}"
@@ -108,7 +108,7 @@
             </xacro:if>
         </joint>
 
-        <link name="${name}_thumb_abad">
+        <link name="${name}_thumb_abad_link">
             <visual>
                 <xacro:if value="${mirror_mesh == True}">
                     <origin rpy="0 0 3.14" xyz="0 0 0" />
@@ -135,8 +135,8 @@
         <joint name="${name}_thumb_mcp_joint" type="revolute">
             <origin xyz="${thumb_mcp_x} ${thumb_mcp_y*mirror} ${thumb_mcp_z}"
                 rpy="0 0 0" />
-            <parent link="${name}_thumb_abad" />
-            <child link="${name}_thumb_mcp" />
+            <parent link="${name}_thumb_abad_link" />
+            <child link="${name}_thumb_mcp_link" />
             <axis xyz="1 0 0" />
             <xacro:if value="${mirror_mesh == True}">
                 <limit effort="${thumb_mcp_torque_max}" velocity="${thumb_mcp_velocity_max}"
@@ -148,7 +148,7 @@
                     lower="${thumb_mcp_position_min}" upper="${thumb_mcp_position_max}" />
             </xacro:if>
         </joint>
-        <link name="${name}_thumb_mcp">
+        <link name="${name}_thumb_mcp_link">
             <visual>
                 <xacro:if value="${mirror_mesh == True}">
                     <origin rpy="0 0 3.14" xyz="0 0 0" />
@@ -181,8 +181,8 @@
 
         <joint name="${name}_thumb_pip_joint" type="revolute">
             <origin xyz="${thumb_pip_x} ${thumb_pip_y*mirror} ${thumb_pip_z}" rpy="0 0 0" />
-            <parent link="${name}_thumb_mcp" />
-            <child link="${name}_thumb_pip" />
+            <parent link="${name}_thumb_mcp_link" />
+            <child link="${name}_thumb_pip_link" />
             <axis xyz="1 0 0" />
             <xacro:if value="${mirror_mesh == True}">
                 <limit effort="${thumb_pip_torque_max}" velocity="${thumb_pip_velocity_max}"
@@ -198,7 +198,7 @@
                 multiplier="${thumb_pip_multiplier}"
                 offset="0" />
         </joint>
-        <link name="${name}_thumb_pip">
+        <link name="${name}_thumb_pip_link">
             <visual>
                 <xacro:if value="${mirror_mesh == True}">
                     <origin rpy="0 0 3.14" xyz="0 0 0" />
@@ -231,8 +231,8 @@
 
         <joint name="${name}_thumb_dip_joint" type="revolute">
             <origin xyz="${thumb_dip_x} ${thumb_dip_y*mirror} ${thumb_dip_z}" rpy="0 0 0" />
-            <parent link="${name}_thumb_pip" />
-            <child link="${name}_thumb_dip" />
+            <parent link="${name}_thumb_pip_link" />
+            <child link="${name}_thumb_dip_link" />
             <axis xyz="1 0 0" />
             <xacro:if value="${mirror_mesh == True}">
                 <limit effort="${thumb_dip_torque_max}" velocity="${thumb_dip_velocity_max}"
@@ -248,7 +248,7 @@
                 multiplier="${thumb_dip_multiplier}"
                 offset="0" />
         </joint>
-        <link name="${name}_thumb_dip">
+        <link name="${name}_thumb_dip_link">
             <visual>
                 <xacro:if value="${mirror_mesh == True}">
                     <origin rpy="0 0 3.14" xyz="0 0 0" />
@@ -280,7 +280,7 @@
         </link>
         <joint name="${name}_thumb_tip_joint" type="fixed">
             <origin xyz="0 ${thumb_tip_y*mirror} ${thumb_tip_z}" rpy="0 0 0" />
-            <parent link="${name}_thumb_dip" />
+            <parent link="${name}_thumb_dip_link" />
             <child link="${name}_thumb_tip" />
         </joint>
         <link name="${name}_thumb_tip">
@@ -297,7 +297,7 @@
         <joint name="${name}_index_abad_joint" type="revolute">
             <origin xyz="${index_abad_x} ${index_abad_y*mirror} ${index_abad_z}" rpy="0 0 0" />
             <parent link="${name}_palm" />
-            <child link="${name}_index_abad" />
+            <child link="${name}_index_abad_link" />
             <axis xyz="1 0 0" />
 
             <xacro:if value="${mirror_mesh == True}">
@@ -315,14 +315,14 @@
         <joint name="${name}_middle_abad_joint" type="fixed">
             <origin xyz="${middle_abad_x} ${middle_abad_y*mirror} ${middle_abad_z}" rpy="0 0 0" />
             <parent link="${name}_palm" />
-            <child link="${name}_middle_abad" />
+            <child link="${name}_middle_abad_link" />
         </joint>
         <xacro:finger prefix="${name}_middle" mesh_path="${mesh_path}" />
 
         <joint name="${name}_ring_abad_joint" type="revolute">
             <origin xyz="${ring_abad_x} ${ring_abad_y*mirror} ${ring_abad_z}" rpy="0 0 0" />
             <parent link="${name}_palm" />
-            <child link="${name}_ring_abad" />
+            <child link="${name}_ring_abad_link" />
             <axis xyz="1 0 0" />
             <xacro:if value="${mirror_mesh == True}">
                 <limit effort="${ring_abad_torque_max}" velocity="${ring_abad_velocity_max}"
@@ -340,7 +340,7 @@
         <joint name="${name}_pinky_abad_joint" type="revolute">
             <origin xyz="${pinky_abad_x} ${pinky_abad_y*mirror} ${pinky_abad_z}" rpy="0 0 0" />
             <parent link="${name}_palm" />
-            <child link="${name}_pinky_abad" />
+            <child link="${name}_pinky_abad_link" />
             <axis xyz="1 0 0" />
             <xacro:if value="${mirror_mesh == True}">
                 <limit effort="${pinky_abad_torque_max}" velocity="${pinky_abad_velocity_max}"

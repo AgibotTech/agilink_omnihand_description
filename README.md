@@ -46,12 +46,12 @@ xacro omnihand_left.xacro > omnihand_left.urdf
 
 ### 显示右手模型
 ```bash
-ros2 launch omnihand_description omnihand_description_launch.py
+ros2 launch omnihand_description omnihand_description.launch.py
 ```
 
 ### 显示左手模型
 ```bash
-ros2 launch omnihand_description omnihand_description_launch.py hand_type:=left
+ros2 launch omnihand_description omnihand_description.launch.py hand_type:=left
 ```
 
 ## 更加精确的碰撞 URDF 模型
@@ -63,12 +63,12 @@ omnihand_description/assets/urdf_mesh_col/
 
 ### 显示右手（精确碰撞模型）
 ```bash
-ros2 launch omnihand_description omnihand_description_col_launch.py
+ros2 launch omnihand_description omnihand_description_col.launch.py
 ```
 
 ### 显示左手（精确碰撞模型）
 ```bash
-ros2 launch omnihand_description omnihand_description_col_launch.py hand_type:=left
+ros2 launch omnihand_description omnihand_description_col.launch.py hand_type:=left
 ```
 
 > **关于关节耦合精度的说明**\

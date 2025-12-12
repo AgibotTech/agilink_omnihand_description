@@ -42,12 +42,12 @@ xacro omnihand_left.xacro > omnihand_left.urdf
 
 ### Right Hand
 ```bash
-ros2 launch omnihand_description omnihand_description_launch.py
+ros2 launch omnihand_description omnihand_description.launch.py
 ```
 
 ### Left Hand
 ```bash
-ros2 launch omnihand_description omnihand_description_launch.py hand_type:=left
+ros2 launch omnihand_description omnihand_description.launch.py hand_type:=left
 ```
 
 ## High Precision Collision URDF
@@ -59,12 +59,12 @@ omnihand_description/assets/urdf_mesh_col/
 
 ### Right Hand With Accurate Collision
 ```bash
-ros2 launch omnihand_description omnihand_description_col_launch.py
+ros2 launch omnihand_description omnihand_description_col.launch.py
 ```
 
 ### Left Hand With Accurate Collision
 ```bash
-ros2 launch omnihand_description omnihand_description_col_launch.py hand_type:=left
+ros2 launch omnihand_description omnihand_description_col.launch.py hand_type:=left
 ```
 
 > **Note on Joint Coupling Accuracy**\
