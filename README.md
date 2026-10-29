@@ -1,110 +1,133 @@
-[English Version](README_EN.md)
-# OmniHand ROS 2 软件包
+[中文说明](README_CN.md)
 
-这是一个用于 **OmniHand** 的 ROS 2 软件包，包含左右手的 URDF 模型文件，并支持在 RViz 中可视化显示。推荐使用的 ROS 2 版本为 **Humble**。
+# OmniHand 2025 (O10) ROS 2 Package
 
-## 安装指南
+This is the `omnihand_2025_description` ROS 2 package for **OmniHand 2025 (O10)**. It includes the URDF files for both the left and right hands, along with visualization support in RViz. The recommended ROS 2 distribution for using this package is **Humble**.
 
-### 1. 克隆仓库
+## File Structure
 
-创建工作空间并克隆仓库：
+```text
+omnihand_2025_description/
+├── CMakeLists.txt
+├── package.xml
+├── launch/          # ROS 2 visualization launch files
+├── urdf/            # Primitive collision models and xacro/ sources
+├── urdf_mesh_col/   # Convex collision models and xacro/ sources
+├── meshes/          # STL meshes, with collision meshes in collision/
+├── rviz/            # RViz configurations
+└── mjcf/            # MuJoCo models and scenes
+```
+
+Resource directories are installed under `share/omnihand_2025_description/` with the same layout.
+Earlier versions used the ROS package name `omnihand_description` and kept resources under `assets/`. Projects using those versions need to update the package name and source paths. Joint names, model filenames, and model parameters are unchanged.
+
+## Installation
+
+### 1. Clone the Repository
+Create a new `src` directory, navigate into it, and clone the repository:
 
 ```bash
 mkdir -p ~/omnihand_ws/src
 cd ~/omnihand_ws/src
-git clone <repository_url>
+git clone <repository_url> omnihand_2025_description
 cd ..
 ```
 
-### 2. 编译工作空间
-
-运行以下命令进行编译：
+### 2. Build the Package
+Build the workspace using:
 
 ```bash
+rosdep install --from-paths src --ignore-src -r -y
 colcon build
 ```
 
-### 3. 加载环境
-
-在使用前，需要加载工作空间的环境配置：
+### 3. Source the Setup File
+Before using the package, source the workspace setup file:
 
 ```bash
 source install/setup.bash
 ```
 
-## 生成 OmniHand 的 URDF 文件
+## Generate OmniHand URDF File
 
-通过 Xacro 文件生成 URDF：
+To generate the URDF description from the Xacro files:
 
 ```bash
-cd ~/omnihand_ws/src/omnihand_description/assets/urdf/xacro
-xacro omnihand_right.xacro > omnihand_right.urdf
-xacro omnihand_left.xacro > omnihand_left.urdf
+cd ~/omnihand_ws/src/omnihand_2025_description/urdf
+xacro xacro/omnihand_right.xacro > omnihand_right.urdf
+xacro xacro/omnihand_left.xacro > omnihand_left.urdf
 ```
 
-## RViz 可视化
+## Visualization in RViz
 
-### 显示右手模型
+### Right Hand
 ```bash
-ros2 launch omnihand_description omnihand_description.launch.py
+ros2 launch omnihand_2025_description omnihand_description.launch.py
 ```
 
-### 显示左手模型
+### Left Hand
 ```bash
-ros2 launch omnihand_description omnihand_description.launch.py hand_type:=left
+ros2 launch omnihand_2025_description omnihand_description.launch.py hand_type:=left
 ```
 
-## 更加精确的碰撞 URDF 模型
-本包额外提供基于原始 mesh 进行 凸分解优化 的碰撞模型 URDF，用于实现更真实、更精确的物理接触效果。
-相比常规基于 box/sphere 的碰撞建模，该模型可显著提高碰撞检测的准确性。
+## High Precision Collision URDF
+This package additionally provides a collision-optimized URDF model, generated using convex optimization over original hand mesh geometry.
+Compared to standard primitive collision approximations, this version produces more accurate physical interaction.
 
-高精度碰撞模型位于：
-omnihand_description/assets/urdf_mesh_col/
+The convex collision URDF is located at:
+omnihand_2025_description/urdf_mesh_col/
 
-### 显示右手（精确碰撞模型）
+### Right Hand With Accurate Collision
 ```bash
-ros2 launch omnihand_description omnihand_description_col.launch.py
+ros2 launch omnihand_2025_description omnihand_description_col.launch.py
 ```
 
-### 显示左手（精确碰撞模型）
+### Left Hand With Accurate Collision
 ```bash
-ros2 launch omnihand_description omnihand_description_col.launch.py hand_type:=left
+ros2 launch omnihand_2025_description omnihand_description_col.launch.py hand_type:=left
 ```
 
-> **关于关节耦合精度的说明**\
-> URDF 仅支持 **线性耦合**，而 OmniHand
-> 的大部分被动关节与主动关节之间是 **非线性耦合**。\
-> 因此，URDF 模型无法完全复现真实机械手的耦合行为。\
-> 若需要模拟真实耦合关系，请参考：
-> - **MuJoCo 的 MJCF 模型**（已包含真实非线性映射）
-> - **OmniHand SDK**（计算真实耦合关系）
+> **Note on Joint Coupling Accuracy**\
+> URDF only supports **linear coupling** between passive and active
+> joints.\
+> However, OmniHand's mechanical structure uses **nonlinear
+> coupling** for most passive joints, making it impossible for the URDF
+> model to fully match the real hardware behavior.\
+> If you need to simulate the **true nonlinear coupling**, please refer
+> to:
+> - The **MuJoCo MJCF model**, which contains accurate nonlinear mappings
+> - The **OmniHand SDK**, which provides real coupling functions
 
 ------------------------------------------------------------------------
 
-## MuJoCo MJCF 文件
+## MuJoCo MJCF Files
 
-本包也提供 **MuJoCo MJCF 模型**，可用于在物理仿真环境中模拟 OmniHand。  
-MJCF 文件兼容 **MuJoCo 3.1.0 及以上版本**。
+This package also provides **MuJoCo MJCF models** for simulating OmniHand in physics-based environments.\
+The MJCF files are compatible with **MuJoCo 3.1.0 and later**.
 
-模型路径：
+Model files are located at:
 
 ```
-omnihand_description/assets/MJCF/
+omnihand_2025_description/mjcf/
 ```
 
-包含以下内容：
+This directory includes:
 
-- `scene.xml` – 完整场景文件，可快速预览  
-- `omnihand_left.xml` – 左手 MJCF 模型  
-- `omnihand_right.xml` – 右手 MJCF 模型  
-- `meshes/` – 对应的 STL 网格文件  
+- `scene.xml` – A complete scene file for quick preview\
+- `omnihand_left.xml` – Left-hand model\
+- `omnihand_right.xml` – Right-hand model\
+- `omnihand_asset.xml` – Mesh resources and simulation defaults
 
-### 快速预览方式
+The STL mesh assets are located in `../meshes/`.
 
-1. 打开 MuJoCo 自带的 `simulate` 查看器  
-2. 将 `assets/MJCF/scene.xml` 拖入窗口  
-3. 模型会自动加载并显示  
+### Quick Preview
 
-示例：
+To quickly preview the OmniHand model:
+
+1. Open MuJoCo’s `simulate` viewer\
+2. Drag and drop `mjcf/scene.xml` into the window
+3. The OmniHand model will automatically load and display
+
+Example:
 
 ![alt text](mujoco_image.png)

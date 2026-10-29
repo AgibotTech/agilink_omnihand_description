@@ -2,10 +2,10 @@
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <xacro:include filename="$(find omnihand_description)/urdf/xacro/const.xacro" />
-    <xacro:include filename="$(find omnihand_description)/urdf/xacro/finger.xacro" />
-    <xacro:include filename="$(find omnihand_description)/urdf/xacro/material.xacro" />
-    <xacro:property name="mesh_path" value="package://omnihand_description/meshes" />
+    <xacro:include filename="$(find omnihand_2025_description)/urdf/xacro/const.xacro" />
+    <xacro:include filename="$(find omnihand_2025_description)/urdf/xacro/finger.xacro" />
+    <xacro:include filename="$(find omnihand_2025_description)/urdf/xacro/material.xacro" />
+    <xacro:property name="mesh_path" value="package://omnihand_2025_description/meshes" />
 
     <xacro:macro name="hand" params="name mirror mirror_mesh *origin">
 

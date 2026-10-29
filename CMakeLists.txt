@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(omnihand_description)
+project(omnihand_2025_description)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -25,10 +25,18 @@ endif()
 
 install(DIRECTORY
   launch
-  assets/urdf
-  assets/urdf_mesh_col
-  assets/meshes
-  assets/rviz
+  urdf
+  urdf_mesh_col
+  meshes
+  rviz
+  mjcf
+  DESTINATION share/${PROJECT_NAME}/
+)
+
+install(FILES
+  README.md
+  README_CN.md
+  mujoco_image.png
   DESTINATION share/${PROJECT_NAME}/
 )
 

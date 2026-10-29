@@ -10,10 +10,10 @@ from launch.actions import OpaqueFunction
 
 def launch_setup(context, *args, **kwargs):
     # package
-    pkg_dir = get_package_share_directory('omnihand_description')
+    pkg_dir = get_package_share_directory('omnihand_2025_description')
 
     xacro_path = os.path.join(get_package_share_directory(
-        'omnihand_description'), 'urdf/xacro', 'omnihand_right.xacro')
+        'omnihand_2025_description'), 'urdf/xacro', 'omnihand_right.xacro')
     
     rviz_arguments = ['-d', os.path.join(pkg_dir, 'rviz', 'omnihand_right.rviz')]
 
@@ -21,7 +21,7 @@ def launch_setup(context, *args, **kwargs):
     # urdf
     if hand_type == 'left':
         xacro_path = os.path.join(get_package_share_directory(
-        'omnihand_description'), 'urdf/xacro', 'omnihand_left.xacro')
+        'omnihand_2025_description'), 'urdf/xacro', 'omnihand_left.xacro')
         rviz_arguments=['-d', [os.path.join(pkg_dir, 'rviz', 'omnihand_left.rviz')]]
     
     urdf_contents = xacro.process_file(xacro_path).toprettyxml(indent='  ')
