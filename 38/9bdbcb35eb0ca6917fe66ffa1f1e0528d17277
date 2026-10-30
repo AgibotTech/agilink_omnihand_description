@@ -1,0 +1,235 @@
+CMakeLists.txt
+  s_9659097d9fceb8::t_c2d2a136150fb1 2,28-39
+README_CN.md
+  s_9659097d9fceb8::t_c2d2a136150fb1 1-104,106-115,119-124,126,128-131
+  s_9659097d9fceb8::t_1159018748e8d6 105,116-118,125,127
+README.md
+  s_9659097d9fceb8::t_1159018748e8d6 97,105,116-118,127
+  s_9659097d9fceb8::t_c2d2a136150fb1 1,3,5,7,9-27,32,36-37,40,44-45,51,53,56-58,61,63,65,68,70,73-75,77-78,80,82,85,87,90-96,98-99,103,106,108,111,114-115,119-121,123,125,128-129,131,133
+package.xml
+  s_a81f4ba7f5c7ba::t_a705af536e1e04 4,6,12-19
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "389bdbcb35eb0ca6917fe66ffa1f1e0528d17277",
+  "prompts": {},
+  "sessions": {
+    "s_9659097d9fceb8": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17b33-5f14-7a33-b176-41722cb43bab",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": null,
+      "custom_attributes": {
+        "tlab.token_usage.cache_creation_tokens": "0",
+        "tlab.token_usage.input_tokens": "5648148",
+        "tlab.token_usage.cache_read_tokens": "172380693",
+        "tlab.session_started_at": "2026-10-30T00:17:48Z",
+        "tlab.token_usage.output_tokens": "983848"
+      }
+    },
+    "s_a81f4ba7f5c7ba": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a184f7-7ffd-7c13-9df8-7afb655b7820",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "xuqigui <xuqigui@agibot.com>",
+      "custom_attributes": {
+        "tlab.token_usage.input_tokens": "111406",
+        "tlab.token_usage.output_tokens": "13551",
+        "tlab.token_usage.cache_read_tokens": "1616879",
+        "tlab.token_usage.cache_creation_tokens": "0",
+        "tlab.session_started_at": "2026-10-29T00:24:23Z"
+      }
+    }
+  },
+  "changes": [
+    {
+      "new_path": "README_CN.md",
+      "additions": {
+        "human": 131
+      }
+    },
+    {
+      "old_path": "CMakeLists.txt",
+      "new_path": "CMakeLists.txt",
+      "additions": {
+        "human": 13
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_a81f4ba7f5c7ba",
+            "lines": 5
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "README.md",
+      "new_path": "README.md",
+      "additions": {
+        "human": 78
+      },
+      "deletions": {
+        "human": 42,
+        "ai": [
+          {
+            "session_id": "s_a81f4ba7f5c7ba",
+            "lines": 13
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "README_EN.md",
+      "deletions": {
+        "human": 97,
+        "ai": [
+          {
+            "session_id": "s_a81f4ba7f5c7ba",
+            "lines": 14
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "assets/urdf/omnihand_left.urdf",
+      "new_path": "urdf/omnihand_left.urdf",
+      "additions": {
+        "human": 18
+      },
+      "deletions": {
+        "human": 18
+      }
+    },
+    {
+      "old_path": "assets/urdf/omnihand_right.urdf",
+      "new_path": "urdf/omnihand_right.urdf",
+      "additions": {
+        "human": 18
+      },
+      "deletions": {
+        "human": 18
+      }
+    },
+    {
+      "old_path": "assets/urdf/xacro/hand.xacro",
+      "new_path": "urdf/xacro/hand.xacro",
+      "additions": {
+        "human": 4
+      },
+      "deletions": {
+        "human": 4
+      }
+    },
+    {
+      "old_path": "assets/urdf/xacro/omnihand_left.xacro",
+      "new_path": "urdf/xacro/omnihand_left.xacro",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "assets/urdf/xacro/omnihand_right.xacro",
+      "new_path": "urdf/xacro/omnihand_right.xacro",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "assets/urdf_mesh_col/omnihand_left.urdf",
+      "new_path": "urdf_mesh_col/omnihand_left.urdf",
+      "additions": {
+        "human": 32
+      },
+      "deletions": {
+        "human": 32
+      }
+    },
+    {
+      "old_path": "assets/urdf_mesh_col/omnihand_right.urdf",
+      "new_path": "urdf_mesh_col/omnihand_right.urdf",
+      "additions": {
+        "human": 32
+      },
+      "deletions": {
+        "human": 32
+      }
+    },
+    {
+      "old_path": "assets/urdf_mesh_col/xacro/hand.xacro",
+      "new_path": "urdf_mesh_col/xacro/hand.xacro",
+      "additions": {
+        "human": 4
+      },
+      "deletions": {
+        "human": 4
+      }
+    },
+    {
+      "old_path": "assets/urdf_mesh_col/xacro/omnihand_left.xacro",
+      "new_path": "urdf_mesh_col/xacro/omnihand_left.xacro",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "assets/urdf_mesh_col/xacro/omnihand_right.xacro",
+      "new_path": "urdf_mesh_col/xacro/omnihand_right.xacro",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "launch/omnihand_description.launch.py",
+      "new_path": "launch/omnihand_description.launch.py",
+      "additions": {
+        "human": 3
+      },
+      "deletions": {
+        "human": 3
+      }
+    },
+    {
+      "old_path": "launch/omnihand_description_col.launch.py",
+      "new_path": "launch/omnihand_description_col.launch.py",
+      "additions": {
+        "human": 3
+      },
+      "deletions": {
+        "human": 3
+      }
+    },
+    {
+      "old_path": "package.xml",
+      "new_path": "package.xml",
+      "additions": {
+        "human": 10
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_a81f4ba7f5c7ba",
+            "lines": 2
+          }
+        ]
+      }
+    }
+  ]
+}
