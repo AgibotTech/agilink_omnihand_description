@@ -1,0 +1,111 @@
+urdf/omnihand_left.urdf
+  s_6a3c853268126a::t_abf566187ea3e2 14-15,88,109,130,228,251,279,318,341,369,410,433,461,502,525,553
+urdf/omnihand_right.urdf
+  s_6a3c853268126a::t_881de5b271d6f9 14-15,88,109,130,228,251,279,318,341,369,410,433,461,502,525,553
+urdf/xacro/finger.xacro
+  s_6a3c853268126a::t_2a0aea5692ee01 13,40,80
+urdf/xacro/hand.xacro
+  s_6a3c853268126a::t_91281405dc514e 82,122,162
+urdf/xacro/material.xacro
+  s_6a3c853268126a::t_05a0f94285d369 12-13
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.14.2",
+  "base_commit_sha": "231d96f0e099b35107b0e541110bd1fe5f0d5564",
+  "prompts": {},
+  "sessions": {
+    "s_6a3c853268126a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a18cfa-7d27-77f2-8ba2-5144fe9a2959",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "xuqigui <xuqigui@agibot.com>",
+      "custom_attributes": {
+        "tlab.token_usage.cache_read_tokens": "312203940",
+        "tlab.token_usage.output_tokens": "1044356",
+        "tlab.token_usage.cache_creation_tokens": "0",
+        "tlab.token_usage.input_tokens": "7903611",
+        "tlab.session_started_at": "2026-10-30T13:23:22Z"
+      }
+    }
+  },
+  "changes": [
+    {
+      "old_path": "urdf/omnihand_left.urdf",
+      "new_path": "urdf/omnihand_left.urdf",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_6a3c853268126a",
+            "lines": 17
+          }
+        ]
+      },
+      "deletions": {
+        "human": 17
+      }
+    },
+    {
+      "old_path": "urdf/omnihand_right.urdf",
+      "new_path": "urdf/omnihand_right.urdf",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_6a3c853268126a",
+            "lines": 17
+          }
+        ]
+      },
+      "deletions": {
+        "human": 17
+      }
+    },
+    {
+      "old_path": "urdf/xacro/finger.xacro",
+      "new_path": "urdf/xacro/finger.xacro",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_6a3c853268126a",
+            "lines": 3
+          }
+        ]
+      },
+      "deletions": {
+        "human": 3
+      }
+    },
+    {
+      "old_path": "urdf/xacro/hand.xacro",
+      "new_path": "urdf/xacro/hand.xacro",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_6a3c853268126a",
+            "lines": 3
+          }
+        ]
+      },
+      "deletions": {
+        "human": 3
+      }
+    },
+    {
+      "old_path": "urdf/xacro/material.xacro",
+      "new_path": "urdf/xacro/material.xacro",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_6a3c853268126a",
+            "lines": 2
+          }
+        ]
+      },
+      "deletions": {
+        "human": 2
+      }
+    }
+  ]
+}
