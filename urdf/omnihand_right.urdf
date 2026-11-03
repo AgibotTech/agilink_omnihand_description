@@ -11,8 +11,8 @@
   <material name="blue">
     <color rgba="0.0 0.0 0.8 1.0"/>
   </material>
-  <material name="green">
-    <color rgba="0.0 0.8 0.0 1.0"/>
+  <material name="metal">
+    <color rgba="0.86 0.87 0.88 1.0"/>
   </material>
   <material name="grey">
     <color rgba="0.2 0.2 0.2 1.0"/>
@@ -85,7 +85,7 @@
       <geometry>
         <mesh filename="package://omnihand_2025_description/meshes/r_thumb_roll.STL"/>
       </geometry>
-      <material name="blue"/>
+      <material name="metal"/>
     </visual>
     <inertial>
       <origin rpy="0 0 0" xyz="0.018588 -0.0062386 0.0002106"/>
@@ -106,7 +106,7 @@
       <geometry>
         <mesh filename="package://omnihand_2025_description/meshes/thumb_abad.STL"/>
       </geometry>
-      <material name="blue"/>
+      <material name="metal"/>
     </visual>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0120925 -0.0060829"/>
@@ -127,7 +127,7 @@
       <geometry>
         <mesh filename="package://omnihand_2025_description/meshes/thumb_mcp.STL"/>
       </geometry>
-      <material name="brown"/>
+      <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0.0065 0.00237"/>
@@ -225,7 +225,7 @@
       <geometry>
         <mesh filename="package://omnihand_2025_description/meshes/finger_abad.STL"/>
       </geometry>
-      <material name="green"/>
+      <material name="metal"/>
     </visual>
     <inertial>
       <origin rpy="0 0 0" xyz="-0.0009337 -2.37e-05 0.0063625"/>
@@ -248,7 +248,7 @@
       <geometry>
         <mesh filename="package://omnihand_2025_description/meshes/finger_pip.STL"/>
       </geometry>
-      <material name="brown"/>
+      <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0.014"/>
@@ -276,7 +276,7 @@
       <geometry>
         <mesh filename="package://omnihand_2025_description/meshes/finger_dip.STL"/>
       </geometry>
-      <material name="orange"/>
+      <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0.018"/>
@@ -315,7 +315,7 @@
       <geometry>
         <mesh filename="package://omnihand_2025_description/meshes/finger_abad.STL"/>
       </geometry>
-      <material name="green"/>
+      <material name="metal"/>
     </visual>
     <inertial>
       <origin rpy="0 0 0" xyz="-0.0009337 -2.37e-05 0.0063625"/>
@@ -338,7 +338,7 @@
       <geometry>
         <mesh filename="package://omnihand_2025_description/meshes/finger_pip.STL"/>
       </geometry>
-      <material name="brown"/>
+      <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0.014"/>
@@ -366,7 +366,7 @@
       <geometry>
         <mesh filename="package://omnihand_2025_description/meshes/finger_dip.STL"/>
       </geometry>
-      <material name="orange"/>
+      <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0.018"/>
@@ -407,7 +407,7 @@
       <geometry>
         <mesh filename="package://omnihand_2025_description/meshes/finger_abad.STL"/>
       </geometry>
-      <material name="green"/>
+      <material name="metal"/>
     </visual>
     <inertial>
       <origin rpy="0 0 0" xyz="-0.0009337 -2.37e-05 0.0063625"/>
@@ -430,7 +430,7 @@
       <geometry>
         <mesh filename="package://omnihand_2025_description/meshes/finger_pip.STL"/>
       </geometry>
-      <material name="brown"/>
+      <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0.014"/>
@@ -458,7 +458,7 @@
       <geometry>
         <mesh filename="package://omnihand_2025_description/meshes/finger_dip.STL"/>
       </geometry>
-      <material name="orange"/>
+      <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0.018"/>
@@ -499,7 +499,7 @@
       <geometry>
         <mesh filename="package://omnihand_2025_description/meshes/finger_abad.STL"/>
       </geometry>
-      <material name="green"/>
+      <material name="metal"/>
     </visual>
     <inertial>
       <origin rpy="0 0 0" xyz="-0.0009337 -2.37e-05 0.0063625"/>
@@ -522,7 +522,7 @@
       <geometry>
         <mesh filename="package://omnihand_2025_description/meshes/finger_pip.STL"/>
       </geometry>
-      <material name="brown"/>
+      <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0.014"/>
@@ -550,7 +550,7 @@
       <geometry>
         <mesh filename="package://omnihand_2025_description/meshes/finger_dip.STL"/>
       </geometry>
-      <material name="orange"/>
+      <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0.018"/>

@@ -10,7 +10,7 @@
                 <geometry>
                     <mesh filename="${mesh_path}/finger_abad.STL" />
                 </geometry>
-                <material name="green" />
+                <material name="metal" />
             </visual>
             <inertial>
                 <origin rpy="0 0 0"
@@ -37,7 +37,7 @@
                 <geometry>
                     <mesh filename="${mesh_path}/finger_pip.STL" />
                 </geometry>
-                <material name="brown" />
+                <material name="white" />
             </visual>
             <collision>
                 <origin rpy="0 0 0" xyz="0 0 ${finger_pip_collision_z}" />
@@ -77,7 +77,7 @@
                 <geometry>
                     <mesh filename="${mesh_path}/finger_dip.STL" />
                 </geometry>
-                <material name="orange" />
+                <material name="white" />
             </visual>
             <collision>
                 <origin rpy="0 0 0" xyz="0 0 ${finger_dip_collision_z}" />
