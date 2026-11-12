@@ -26,7 +26,7 @@
                         <mesh filename="${mesh_path}/r_palm.STL" />
                     </xacro:if>
                 </geometry>
-                <material name="silver" />
+                <material name="white" />
             </visual>
             <collision>
                 <origin rpy="0 0 0" xyz="0 0 ${palm_collision_cylinder_z}" />
